@@ -1,0 +1,10 @@
+@media (max-width: 1140px) {
+}
+@media (max-width: 768px) {
+  .stats__expert-img {
+    display: none;
+  }
+}
+
+.container {
+}
