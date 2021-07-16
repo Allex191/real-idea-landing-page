@@ -41,7 +41,7 @@
   <section class="hero">
     <div class="container">
       <div class="hero__inner">
-        <div class="hero__info info info info">
+        <div class="hero__info info">
           <h1 id="big" class="title title--hero">We create your idea in Reality.</h1>
           <p class="hero__text text">Let's create your idea in reality. We take care of the creation of the site,
             desktop and mobile application and we also help you to promote them.</p>
@@ -309,36 +309,36 @@
     </div>
   </section>
   <section class="stats" id="stats">
+    <div class="stats__cloud"></div>
     <div class="container">
       <!-- <img class="stats__cloud" src="images/stats-bgr.png" alt=""> -->
       <div class="stats__inner">
-        <div class="stats__expert-img">
-          <div class="stats__info info">
-            <h4 class="title title--stats ">Take a relax sit. We will make stats fly!</h4>
-            <p class="stats__text text">We will make a fully responsible site with great accessibility and also an
-              mobile
-              app
-              with React Native.</p>
-            <div class="stats__list">
-              <ul class="stats__list-element">
-                <li class="stats__list-item">Responsive design</li>
-                <li class="stats__list-item">Big ratings</li>
-                <li class="stats__list-item">400(k) savings</li>
-              </ul>
-              <ul class="stats__list-element">
-                <li class="stats__list-item">HSAs and FSAs</li>
-                <li class="stats__list-item">Commuter benefits</li>
-                <li class="stats__list-item">529 college savings</li>
-              </ul>
-            </div>
-            <a class=" link-btn link-btn--learn-more link-btn--dark " href="#">Learn more</a>
+        <img class="stats__expert-img" src="images/expert.png" alt="">
+        <div class="stats__info info">
+          <h4 class="title title--stats ">Take a relax sit. We will make stats fly!</h4>
+          <p class="stats__text text">We will make a fully responsible site with great accessibility and also an
+            mobile
+            app
+            with React Native.</p>
+          <div class="stats__list">
+            <ul class="stats__list-element">
+              <li class="stats__list-item">Responsive design</li>
+              <li class="stats__list-item">Big ratings</li>
+              <li class="stats__list-item">400(k) savings</li>
+            </ul>
+            <ul class="stats__list-element">
+              <li class="stats__list-item">HSAs and FSAs</li>
+              <li class="stats__list-item">Commuter benefits</li>
+              <li class="stats__list-item">529 college savings</li>
+            </ul>
           </div>
-          <img class="stats__rocket" src="images/rocket.png" alt="">
+          <a class=" link-btn link-btn--learn-more link-btn--dark " href="#">Learn more</a>
         </div>
+        <img class="stats__rocket" src="images/rocket.png" alt="">
       </div>
     </div>
   </section>
-  <section class="customers">
+  <section class="customers" id="customers">
     <div class="container">
       <div class="customers__inner">
         <div class="cloud-middle">
@@ -538,10 +538,10 @@
               </radialGradient>
             </defs>
           </svg>
-          <div class="customers__faces">
-            <div class="customers__face-1"></div>
-            <div class="customers__face-2"></div>
-            <div class="customers__face-3"></div>
+          <div class="customers__face-wrapper">
+            <div class="customers__face customers__face-1"></div>
+            <div class="customers__face customers__face-2"></div>
+            <div class="customers__face customers__face-3"></div>
 
           </div>
         </div>
@@ -578,11 +578,14 @@
           <ul class="footer__list">
             <li class="footer__list-item"><a class="logo" href="#"><img class="footer__logo-img"
                   src="images/Logo-dark.svg" alt="#"></a></li>
-            <li class="footer__list-item"><a href="#" class="list-link list-link--footer">Terms of use </a></li>
-            <li class="footer__list-item"><a href="#" class="list-link list-link--footer footer__privacy">Privacy</a>
+            <li class="footer__list-item footer__dev-name">
+              <p class="footer__dev">Designed and coded by </p><a href="#" class="list-link list-link--footer "> Alexei
+                Petru</a>
             </li>
-            <li>
-              <p class="footer__copy">Copyright by 2019 Real-Idea, Inc</p>
+            <li class="footer__list-item">
+              <p class="footer__dev">Business vector created by </p><a
+                class="list-link list-link--footer menu__list-link"
+                href="https://www.freepik.com/vectors/business ">pikisuperstar-www.freepik.com</a>
             </li>
           </ul>
           <div class="footer__col">
