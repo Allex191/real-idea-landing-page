@@ -1,11 +1,13 @@
+@use 'vars';
+
 body {
   color: aliceblue;
-  background-color: red;
+  background-color: vars.$title-color;
 }
 
 h1 {
   padding-top: 10px;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: white;
-}/*# sourceMappingURL=style.css.map */
+  color: vars.$text-color;
+}

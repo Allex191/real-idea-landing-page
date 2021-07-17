@@ -7,5 +7,6 @@
         "freepik",
         "pikisuperstar",
         "scrolldown"
-    ]
+    ],
+    "liveSassCompile.settings.forceBaseDirectory": "/src"
 }
