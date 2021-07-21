@@ -915,7 +915,8 @@ body {
   background-color: #ffd119;
   border: none;
   border-radius: 5px;
-  transition: background 250ms ease-in-out, transform 150ms ease,
+  transition: background 250ms ease-in-out,
+    transform 150ms ease,
     color 250ms ease-in-out;
 }
 
@@ -968,7 +969,6 @@ body {
 
 .footer__dev-name {
   margin-bottom: 15px;
-  animation: ;
 }
 
 .list-link--footer {
