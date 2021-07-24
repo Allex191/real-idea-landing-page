@@ -12,8 +12,7 @@ html {
 
 body {
   overflow-x: hidden;
-  font-family: "DM Sans", sans-serif;
-  font-weight: 400;
+  font: var(--text-regular-main);
   background: linear-gradient(
     0deg,
     #fff 0%,
@@ -31,22 +30,15 @@ body {
 }
 
 .title {
-  font-family: "Crimson Text", serif;
-  font-size: 40px;
-  font-size: clamp(30px, 4vw, 40px);
-  font-weight: 600;
-  line-height: 50px;
-  color: #0f2137;
+  font: var(--title-semibold-medium);
+  color: var(--color-info-title);
   text-align: center;
   letter-spacing: -1px;
 }
 
 .text {
-  font-family: "DM Sans", sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 35px;
-  color: #02073e;
+  font: var(--text-regular-pre-large);
+  color: var(--color-info-text);
   text-align: center;
 }
 
@@ -73,7 +65,7 @@ body {
     width: 100%;
     height: 3px;
     content: "";
-    background-color: #fe7062;
+    background-color: var(--color-Bittersweet);
     opacity: 0;
     transition: left 0.3s;
   }
@@ -85,15 +77,20 @@ body {
   }
 
   &--menu {
-    color: #fff;
+    color: var(--color-white);
+  }
+
+  &--footer {
+    color: var(--color-Persian-Blue);
   }
 }
 
 .link-btn {
   display: inline-block;
   padding: 5px 8px;
-  font-size: 18px;
-  color: rgb(255, 255, 255);
+  font: var(--text-regular-large);
+  line-height: 20px;
+  color: var(--color-white);
   text-decoration: none;
   border: 2px solid;
   border-radius: 3px;
@@ -111,11 +108,11 @@ body {
   }
 
   &--register {
-    box-shadow: 0 0.6em 0.8em -0.4em #fe7062;
+    box-shadow: 0 0.6em 0.8em -0.4em var(--color-Bittersweet);
 
     &:hover,
     &:focus {
-      color: #fe7062;
+      color: var(--color-Bittersweet);
       transform: translateY(-3px);
     }
   }
@@ -124,6 +121,29 @@ body {
     align-self: center;
     padding: 4px;
     margin-top: 7px;
+    color: var(--color-Downriver);
+
+    font: var(--text-regular-pre-large);
+    line-height: 22px;
     box-shadow: 0 0.4em 0.8em -0.4em rgb(238, 255, 0);
+
+    &:hover,
+    &:focus {
+      color: var(--color-Persian-Blue);
+      transform: translateY(-3px);
+    }
   }
+}
+
+.cloud-middle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 1138px;
+  min-height: 310px;
+  margin-bottom: 50px;
+  user-select: none;
+  background: url(../images/cloud-new-midle.png) no-repeat;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.72));
+  background-size: 1138px 100%;
 }
