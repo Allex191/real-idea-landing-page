@@ -9,7 +9,8 @@
   --color-Bittersweet: #fe7062;
   --color-Laser-Lemon: #fbfe62;
 
-
+  //element sizes
+  // --width-slider
   //title font
   --font-family-title: "Crimson Text", serif;
   --title-semibold-big: 600 clamp(46px, 8vw, 72px) / clamp(60px, 9vw, 80px)
@@ -20,8 +21,9 @@
 
   //main font
   --font-family-main: "DM Sans", serif;
-  --text-bold--large: 700 18px /30px var(--font-family-main);
-  --text-medium-x1large: 500 clamp(25px, 4vw, 38px)/ 60px var(--font-family-main);
+  --text-bold-large: 700 18px /30px var(--font-family-main);
+  --text-medium-x1large: 500 clamp(25px, 4vw, 38px) / 60px
+    var(--font-family-main);
   --text-medium-large: 500 16px /45px var(--font-family-main);
   --text-regular-x1large: 400 19px / 23px var(--font-family-main);
   --text-regular-large: 400 18px / 35px var(--font-family-main);
