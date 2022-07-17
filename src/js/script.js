@@ -1,5 +1,4 @@
 "use strict";
-import { toogleBurger } from "./burgerMenu.js";
 
 const header = document.querySelector(".header");
 const headerHeight = header.getBoundingClientRect().height;
@@ -9,11 +8,13 @@ const features = document.getElementById("features");
 const lazyImages = document.querySelectorAll("[data-src]");
 const sections = document.querySelectorAll("section");
 const bulb = document.querySelector(".hero__bulb-svg");
+const toggleButton = document.querySelector(".toggle-menu");
+const menu = document.querySelector(".menu");
+const menuList = document.querySelector(".menu__list");
 
 const smoothScroolBulb = () => {
   bulb.addEventListener("click", (e) => {
     e.preventDefault;
-
     const featuresCoords = features.getBoundingClientRect();
     console.log(featuresCoords);
     window.scrollTo({
@@ -153,10 +154,9 @@ const slider = function () {
 
 const init = function () {
   smoothScroolBulb();
-  // smoothScroolNavLinks();
+  smoothScroolNavLinks();
   stickyNav();
   lazyLoad();
   slider();
-  toogleBurger();
 };
 init();
