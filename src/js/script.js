@@ -1,5 +1,5 @@
 "use strict";
-//fix hero bulb press scroll
+import { toogleBurger } from "./burgerMenu.js";
 
 const header = document.querySelector(".header");
 const headerHeight = header.getBoundingClientRect().height;
@@ -157,5 +157,6 @@ const init = function () {
   stickyNav();
   lazyLoad();
   slider();
+  toogleBurger();
 };
 init();

@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/jquery.fancybox.css">
   <link rel="stylesheet" href="css/main.css">
-  <script src="js/script.js" defer></script>
+  <script type="module" src="js/script.js"></script>
+  <!-- <script type="module" src="js/burgerMenu.js"></script> -->
 </head>
 
 <body>
@@ -22,7 +23,13 @@
     <div class="container">
       <div class="header__inner">
         <a class="logo" href="#"><img src="images/Logo.svg" alt="#"></a>
+
         <nav class="menu">
+          <div class="toggle-menu">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </div>
           <ul class="menu__list">
             <li class="menu__list-item"><a href="#features" class="list-link list-link--menu">Features</a></li>
             <li class="menu__list-item"><a href="#services" class="list-link list-link--menu">Services</a></li>
