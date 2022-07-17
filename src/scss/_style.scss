@@ -371,7 +371,7 @@
       align-items: center;
       justify-content: space-between;
       margin-top: auto;
-      padding: auto 20px 0 20px;
+      padding: 20px 20px 0 20px;
       filter: drop-shadow(10px 15px 5px rgba(0, 0, 0, 0.72));
     }
     &-btn {
@@ -395,13 +395,23 @@
         right: 0;
       }
     }
-    &-miniimage {
+    &-miniimg {
       position: relative;
       border-radius: 5%;
-      width: calc(100% / 4.5);
+      width: calc(100% / 3.5);
       max-width: 150px;
       cursor: pointer;
       border: 1px solid rgb(196, 199, 17);
+
+      &-wrapper {
+        position: relative;
+        width: inherit;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        overflow: hidden;
+      }
 
       &--active {
         transform: translateY(20px) scale(1.1);

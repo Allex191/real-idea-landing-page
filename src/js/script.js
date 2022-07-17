@@ -63,15 +63,14 @@ const lazyLoad = function () {
 const slider = function () {
   const teamSlider = document.querySelector(".team__slider");
   const teamMainImages = document.querySelectorAll(".team__slider-img");
-  const teamMiniImages = document.querySelectorAll(".team__slider-miniimage");
+  const teamMiniImages = document.querySelectorAll(".team__slider-miniimg");
   const sliderLeftBtn = teamSlider.querySelector(".team__slider-btn-left");
   const sliderRightBtn = teamSlider.querySelector(".team__slider-btn-right");
 
-  const maxSlides = teamMainImages.length;
+  const maxSlides = teamMainImages.length - 1;
   let currentImage = 0;
-  let firstTime = true;
 
-  const translateImage = function (nextOrPrev) {
+  const translateImages = function (nextOrPrev) {
     if (nextOrPrev === "next") {
       currentImage++;
     } else if (nextOrPrev === "prev") {
@@ -82,47 +81,58 @@ const slider = function () {
     });
   };
 
-  const defaultPosition = function () {
-    if (firstTime) {
-      translateImage();
-      firstTime = false;
-    }
-  };
-
   const checkNextImage = function (nextOrPrev, index) {
-    console.log(currentImage);
-    if (nextOrPrev === "next" && currentImage === maxSlides - 1) {
-      currentImage = -1;
+    // if (nextOrPrev === "next" && currentImage === maxSlides - 1) {
+    //   currentImage = -1;
+    // }
+    if (nextOrPrev === "next" && currentImage === maxSlides) {
+      currentImage = 0;
+      currentImage--;
     }
     if (nextOrPrev === "prev" && currentImage === 0) {
       currentImage = maxSlides;
+      currentImage++;
     }
   };
 
-  const rotateImages = function (e) {
-    let index = this;
+  const setDefaultPosition = function () {
+    translateImages();
+    // if(teamMiniImages.classList.contains("team__slider-miniimg--hidden"))
+  };
+  setDefaultPosition();
+
+  const clickMainImgOrBtns = function (e) {
     if (
       e.target.classList.contains("team__slider-img") ||
       e.target.classList.contains("team__slider-btn-right")
     ) {
       checkNextImage("next");
-      translateImage("next");
+      translateImages("next");
     }
     if (e.target.classList.contains("team__slider-btn-left")) {
       checkNextImage("prev");
-      translateImage("prev");
+      translateImages("prev");
     }
   };
 
-  defaultPosition();
+  const clickMiniImages = function () {
+    if (e.target.classList.contains("team__slider-miniimage")) {
+    }
+  };
+
+  const rotateImages = function (e) {
+    let index = this;
+    clickMainImgOrBtns(e);
+    // clickMiniImages();
+  };
 
   sliderLeftBtn.addEventListener("click", rotateImages);
   sliderRightBtn.addEventListener("click", rotateImages);
-  teamMiniImages.forEach((image, i) =>
+  teamMiniImages.forEach((image) =>
     image.addEventListener("click", rotateImages)
   );
-  teamMainImages.forEach((image, i) =>
-    image.addEventListener("click", rotateImages.bind(i))
+  teamMainImages.forEach((image) =>
+    image.addEventListener("click", rotateImages)
   );
 };
 
