@@ -2,13 +2,28 @@
 //fix hero bulb press scroll
 
 const header = document.querySelector(".header");
-const hero = document.querySelector(".hero");
-const features = document.getElementById("features");
 const headerHeight = header.getBoundingClientRect().height;
+const hero = document.querySelector(".hero");
+const heroHeight = hero.getBoundingClientRect().height;
+const features = document.getElementById("features");
 const lazyImages = document.querySelectorAll("[data-src]");
 const sections = document.querySelectorAll("section");
+const bulb = document.querySelector(".hero__bulb-svg");
 
-const smoothScrool = function () {
+const smoothScroolBulb = () => {
+  bulb.addEventListener("click", (e) => {
+    e.preventDefault;
+
+    const featuresCoords = features.getBoundingClientRect();
+    console.log(featuresCoords);
+    window.scrollTo({
+      top: featuresCoords.top - headerHeight + window.scrollY,
+      behavior: "smooth",
+    });
+  });
+};
+
+const smoothScroolNavLinks = function () {
   header.addEventListener("click", function (e) {
     const target = e.target;
     if (target.classList.contains("list-link--menu")) {
@@ -137,7 +152,8 @@ const slider = function () {
 };
 
 const init = function () {
-  smoothScrool();
+  smoothScroolBulb();
+  // smoothScroolNavLinks();
   stickyNav();
   lazyLoad();
   slider();
